@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:label="@string/app_name"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+    tools:context="com.slotmachine.ridin.slotmachine.MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/Background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/currentMoneyLabel"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:src="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/resetButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/bet10Button"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignBaseline="@+id/bet50Button"
+        android:layout_alignBottom="@+id/bet50Button"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@+id/bet50Button"
+        android:text="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SlotMachine" />
+
+    <Button
+        android:id="@+id/bet50Button"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignBaseline="@+id/bet100Button"
+        android:layout_alignBottom="@+id/bet100Button"
+        android:layout_alignEnd="@+id/betAmountLabel3"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="50"
+        app:layout_constraintStart_toEndOf="@+id/bet10Button"
+        app:layout_constraintTop_toBottomOf="@+id/SlotMachine" />
+
+    <Button
+        android:id="@+id/bet100Button"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignStart="@+id/currentMoneyLabel"
+        android:layout_alignTop="@+id/Background"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="100"
+        app:layout_constraintStart_toEndOf="@+id/bet50Button"
+        app:layout_constraintTop_toBottomOf="@+id/SlotMachine" />
+
+    <TextView
+        android:id="@+id/currentMoneyLabel"
+        android:layout_width="173dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toStartOf="@+id/currentMoney"
+        android:text="Current Money:"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/slot2Image"
+        app:layout_constraintEnd_toStartOf="@+id/currentMoneyID"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157" />
+
+    <TextView
+        android:id="@+id/betAmountLabel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Bet Amount:"
+        android:textColor="@android:color/background_light"
+        android:textSize="24dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bet100Button"
+        app:layout_constraintStart_toEndOf="@+id/bet100Button" />
+
+    <TextView
+        android:id="@+id/BetID"
+        android:layout_width="114dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:text="1000"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/betAmountLabel3"
+        app:layout_constraintStart_toEndOf="@+id/betAmountLabel3" />
+
+    <TextView
+        android:id="@+id/currentMoneyID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="92dp"
+        android:text="100"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/currentMoneyLabel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/White"
+        android:layout_width="363dp"
+        android:layout_height="219dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="110dp"
+        android:src="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="@+id/SlotMachine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/SlotMachine" />
+
+    <ImageView
+        android:id="@+id/slot1Image"
+        android:layout_width="110dp"
+        android:layout_height="200dp"
+        android:layout_alignTop="@+id/slot3Image"
+        android:layout_marginBottom="110dp"
+        android:layout_marginStart="32dp"
+        android:layout_toStartOf="@+id/bet100Button"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/blank"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/SlotMachine"
+        app:layout_constraintStart_toStartOf="@+id/SlotMachine" />
+
+    <ImageView
+        android:id="@+id/slot2Image"
+        android:layout_width="110dp"
+        android:layout_height="193dp"
+        android:layout_alignBottom="@+id/slot1Image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="236dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:src="@drawable/blank"
+        app:layout_constraintBottom_toBottomOf="@+id/Background"
+        app:layout_constraintStart_toEndOf="@+id/slot1Image" />
+
+    <ImageView
+        android:id="@+id/slot3Image"
+        android:layout_width="110dp"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@+id/Background"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="110dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:src="@drawable/blank"
+        app:layout_constraintBottom_toBottomOf="@+id/SlotMachine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/slot2Image" />
+
+    <ImageView
+        android:id="@+id/SlotMachine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentMoneyLabel" />
+
+    <Button
+        android:id="@+id/reelButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignEnd="@+id/currentMoney"
+        android:layout_below="@+id/Background"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="16dp"
+        android:text="Spin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignStart="@+id/slot2Image"
+        android:layout_below="@+id/Background"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Reset"
+        app:layout_constraintBaseline_toBaselineOf="@+id/reelButton"
+        app:layout_constraintEnd_toStartOf="@+id/QuitButtom"
+        app:layout_constraintStart_toEndOf="@+id/reelButton" />
+
+    <Button
+        android:id="@+id/QuitButtom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="Quit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/ResetBet"
+        android:layout_width="134dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Reset Bet"
+        app:layout_constraintEnd_toStartOf="@+id/BetID"
+        app:layout_constraintTop_toBottomOf="@+id/betAmountLabel3" />
+
+    <TextView
+        android:id="@+id/JackpotLabel"
+        android:layout_width="103dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="64dp"
+        android:text="Jackpot:"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/SlotMachine"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/JackpotID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/JackpotLabel"
+        app:layout_constraintStart_toEndOf="@+id/JackpotLabel" />
+
+    <TextView
+        android:id="@+id/WinLoseID"
+        android:layout_width="181dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/SlotMachine" />
+
+</android.support.constraint.ConstraintLayout>
